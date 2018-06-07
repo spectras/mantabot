@@ -19,4 +19,5 @@ setup(
     ext_modules=[native],
     include_package_data=True,
     zip_safe=False,
+    requirements=['aiophttp', 'aiopg', 'PyYAML', 'sqlalchemy'],
 )

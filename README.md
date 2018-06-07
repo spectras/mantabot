@@ -36,6 +36,7 @@ Running
 -------
 
 ```bash
+pip install https://github.com/Rapptz/discord.py/archive/rewrite.zip
 pip install https://github.com/spectras/mantabot/archive/master.zip
 export DISCORD_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXX.XXXXXX.XXXXXXXXXXXXXXXXXXXXXXXXXXX
 SETTINGS=config.yml mantabot.py createdb
