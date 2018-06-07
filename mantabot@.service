@@ -1,0 +1,17 @@
+[Unit]
+Description=MantaBot - %i
+
+[Service]
+Type=simple
+
+ExecStart=/usr/bin/mantabot run
+User=baleine
+Group=nogroup
+EnvironmentFile=/etc/mantabot/bot-%i.env
+
+Restart=on-failure
+KillSignal=SIGINT
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,34 @@
+# Configuration
+
+debug: no
+
+databases:
+    default:
+        database: mantabot
+
+plugins:    # full list of plugins, unordered
+    - mantabot.command
+    - mantabot.apps.moderation
+
+handlers:   # event handlers, in order (previous may block events to next)
+    - mantabot.command.DBDispatcher
+    - mantabot.apps.moderation.handlers.ReadOnly
+
+logging:    # logging configuration
+    version: 1
+    formatters:
+        verbose:
+            format: '%(levelname)s [%(name)s] %(message)s'
+    handlers:
+        console:
+            level: DEBUG
+            class: logging.StreamHandler
+            formatter: verbose
+    root:
+        level: WARNING
+        handlers: [console]
+    loggers:
+        manta:
+            level: INFO
+            handlers: [console]
+            propagate: no
