@@ -16,8 +16,7 @@ class Id(command.Command):
 
     async def execute(self, message, args):
         if len(args) != 2:
-            await self.error('usage', name=self.name)
-            return
+            return await self.error('usage', name=self.name)
 
         kind, name = args[0].lower(), args[1].lower()
 
@@ -29,8 +28,7 @@ class Id(command.Command):
         items = collections.get(kind)
 
         if items is None:
-            await self.error('unknown_type', types=', '.join(collections))
-            return
+            return await self.error('unknown_type', types=', '.join(collections))
 
         for item in items:
             if item.name.lower() == name:

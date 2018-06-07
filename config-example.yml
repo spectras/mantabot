@@ -5,6 +5,10 @@ debug: no
 databases:
     default:
         database: mantabot
+        username: mantabot
+        password: foobarbaz
+        host: localhost
+        port: 5432
 
 plugins:    # full list of plugins, unordered
     - mantabot.command
