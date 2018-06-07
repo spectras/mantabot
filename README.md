@@ -1,10 +1,9 @@
-========
 MantaBot
 ========
 
 Asynchronous Discord bot engine written in python.
 
-Builds upon the amazing `discord.py`_ library to provide all the tools required for a complex bot that can run several features in separate apps, all as a single bot, as a production service.
+Builds upon the amazing [discord.py](https://github.com/Rapptz/discord.py) library to provide all the tools required for a complex bot that can run several features in separate apps, all as a single bot, as a production service.
 
 **This project audience is bot developers looking for a framework, it has not functionality on its own.**
 
@@ -27,7 +26,3 @@ pip install mantabot
 export DISCORD_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXX.XXXXXX.XXXXXXXXXXXXXXXXXXXXXXXXXXX
 SETTINGS=config-example.yml mantabot
 ```
-
-
-.. _discord.py: https://github.com/Rapptz/discord.py
-
